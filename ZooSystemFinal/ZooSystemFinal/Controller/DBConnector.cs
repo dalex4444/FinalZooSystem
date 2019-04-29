@@ -77,6 +77,7 @@ namespace Controller
                 catch
                 {
                     MessageBox.Show("Unable to connect to database.");
+                    theUser.Uname = "";
 
                 }
                 finally //close connection to database
@@ -121,26 +122,33 @@ namespace Controller
 
         public void loginFailure(User user)
         {
-            //store failure
-            string SessionLogout = "INSERT INTO dbo.[Session] (event, time, uname) VALUES(@event, @time, @uname)";
-            SqlParameter sessParam = new SqlParameter();
-            sessParam.ParameterName = "@event";
-            sessParam.Value = "login failure";
-            SqlParameter timeParam = new SqlParameter();
-            timeParam.ParameterName = "@time";
-            timeParam.Value = DateTime.Now.ToString();
-            SqlParameter UserParam = new SqlParameter();
-            UserParam.ParameterName = "@uname";
-            UserParam.Value = user.Uname; ;
-
-            using (SqlCommand SessionLogoutCmd = new SqlCommand(SessionLogout, connection))
+            try
             {
-                connection.Open();
-                SessionLogoutCmd.Parameters.Add(sessParam);
-                SessionLogoutCmd.Parameters.Add(timeParam);
-                SessionLogoutCmd.Parameters.Add(UserParam);
-                SessionLogoutCmd.ExecuteNonQuery();
-                connection.Close();
+                //store failure
+                string SessionLogout = "INSERT INTO dbo.[Session] (event, time, uname) VALUES(@event, @time, @uname)";
+                SqlParameter sessParam = new SqlParameter();
+                sessParam.ParameterName = "@event";
+                sessParam.Value = "login failure";
+                SqlParameter timeParam = new SqlParameter();
+                timeParam.ParameterName = "@time";
+                timeParam.Value = DateTime.Now.ToString();
+                SqlParameter UserParam = new SqlParameter();
+                UserParam.ParameterName = "@uname";
+                UserParam.Value = user.Uname; ;
+
+                using (SqlCommand SessionLogoutCmd = new SqlCommand(SessionLogout, connection))
+                {
+                    connection.Open();
+                    SessionLogoutCmd.Parameters.Add(sessParam);
+                    SessionLogoutCmd.Parameters.Add(timeParam);
+                    SessionLogoutCmd.Parameters.Add(UserParam);
+                    SessionLogoutCmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch
+            {
+                //MessageBox.Show("No Connection");
             }
         }
 

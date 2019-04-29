@@ -28,6 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ZooSystemFinal\Boundry\SuccessMessage.cs = ZooSystemFinal\Boundry\SuccessMessage.cs
 		ZooSystemFinal\Boundry\SuccessMessage.Designer.cs = ZooSystemFinal\Boundry\SuccessMessage.Designer.cs
 		ZooSystemFinal\Boundry\SuccessMessage.resx = ZooSystemFinal\Boundry\SuccessMessage.resx
+		ZooSystemFinal\ZooSystem.mdf = ZooSystemFinal\ZooSystem.mdf
 	EndProjectSection
 EndProject
 Global

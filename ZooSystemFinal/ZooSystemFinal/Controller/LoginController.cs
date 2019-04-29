@@ -48,8 +48,17 @@ namespace Controller
             }
             else
             {
-                MessageBox.Show("Invalid credentials.");
-                dbcon1.loginFailure(DBConnector.theUser);
+                if (DBConnector.theUser.Uname == "")
+                {
+                    return;
+                }
+                else
+                {
+
+
+                    MessageBox.Show("Invalid credentials.");
+                    dbcon1.loginFailure(DBConnector.theUser);
+                }
             }
 
         }
@@ -89,7 +98,7 @@ namespace Controller
                 }
                 catch
                 {
-                    MessageBox.Show("Unable to connect to database.");
+                    //MessageBox.Show("Unable to connect to database.");
                 }
                 finally
                 {

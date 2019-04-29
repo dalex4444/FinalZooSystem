@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,46 +61,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Boundry\AddEnclosureForm.cs">
+    <Compile Include="Boundary\AddEnclosureForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boundry\AddEnclosureForm.Designer.cs">
+    <Compile Include="Boundary\AddEnclosureForm.Designer.cs">
       <DependentUpon>AddEnclosureForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundry\ErrorMessage.cs">
+    <Compile Include="Boundary\ErrorMessage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boundry\ErrorMessage.Designer.cs">
+    <Compile Include="Boundary\ErrorMessage.Designer.cs">
       <DependentUpon>ErrorMessage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundry\LoginForm.cs">
+    <Compile Include="Boundary\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boundry\LoginForm.Designer.cs">
+    <Compile Include="Boundary\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundry\LogoutForm.cs">
+    <Compile Include="Boundary\LogoutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boundry\LogoutForm.Designer.cs">
+    <Compile Include="Boundary\LogoutForm.Designer.cs">
       <DependentUpon>LogoutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundry\MainMenu.cs">
+    <Compile Include="Boundary\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boundry\MainMenu.Designer.cs">
+    <Compile Include="Boundary\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundry\ScheduleView.cs">
+    <Compile Include="Boundary\ScheduleView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boundry\ScheduleView.Designer.cs">
+    <Compile Include="Boundary\ScheduleView.Designer.cs">
       <DependentUpon>ScheduleView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundry\SuccessMessage.cs">
+    <Compile Include="Boundary\SuccessMessage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Boundry\SuccessMessage.Designer.cs">
+    <Compile Include="Boundary\SuccessMessage.Designer.cs">
       <DependentUpon>SuccessMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\DBConnector.cs" />
@@ -97,25 +112,25 @@
     <Compile Include="Entity\EnclosureList.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Boundry\AddEnclosureForm.resx">
+    <EmbeddedResource Include="Boundary\AddEnclosureForm.resx">
       <DependentUpon>AddEnclosureForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boundry\ErrorMessage.resx">
+    <EmbeddedResource Include="Boundary\ErrorMessage.resx">
       <DependentUpon>ErrorMessage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boundry\LoginForm.resx">
+    <EmbeddedResource Include="Boundary\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boundry\LogoutForm.resx">
+    <EmbeddedResource Include="Boundary\LogoutForm.resx">
       <DependentUpon>LogoutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boundry\MainMenu.resx">
+    <EmbeddedResource Include="Boundary\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boundry\ScheduleView.resx">
+    <EmbeddedResource Include="Boundary\ScheduleView.resx">
       <DependentUpon>ScheduleView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boundry\SuccessMessage.resx">
+    <EmbeddedResource Include="Boundary\SuccessMessage.resx">
       <DependentUpon>SuccessMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -141,6 +156,27 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ZooSystem.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ZooSystem_log.ldf">
+      <DependentUpon>ZooSystem.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
