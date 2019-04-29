@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-LogoutForm",
+      "appliesTo": "ZooSystemFinal/Boundry/LogoutForm.resx",
+      "type": "launch"
+    },
+    {
+      "taskName": "task-LogoutForm",
+      "appliesTo": "ZooSystemFinal/Boundry/LogoutForm.resx",
+      "type": "launch"
+    }
+  ]
+}
