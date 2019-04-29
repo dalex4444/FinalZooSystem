@@ -19,7 +19,6 @@ C:\Users\dalex\source\repos\FinalZooSystem\ZooSystemFinal\ZooSystemFinal\bin\Deb
 C:\Users\dalex\source\repos\FinalZooSystem\ZooSystemFinal\ZooSystemFinal\bin\Debug\ZooSystemFinal.pdb
 C:\Users\dalex\source\repos\FinalZooSystem\ZooSystemFinal\ZooSystemFinal\obj\Debug\ZooSystemFinal.csprojAssemblyReference.cache
 C:\Users\dalex\source\repos\FinalZooSystem\ZooSystemFinal\ZooSystemFinal\obj\Debug\Boundary.AddEnclosureForm.resources
-C:\Users\dalex\source\repos\FinalZooSystem\ZooSystemFinal\ZooSystemFinal\obj\Debug\Boundary.ErrorMessage.resources
 C:\Users\dalex\source\repos\FinalZooSystem\ZooSystemFinal\ZooSystemFinal\obj\Debug\Boundary.LoginForm.resources
 C:\Users\dalex\source\repos\FinalZooSystem\ZooSystemFinal\ZooSystemFinal\obj\Debug\Boundary.LogoutForm.resources
 C:\Users\dalex\source\repos\FinalZooSystem\ZooSystemFinal\ZooSystemFinal\obj\Debug\Boundary.MainMenu.resources

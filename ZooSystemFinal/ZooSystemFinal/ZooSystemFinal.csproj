@@ -67,12 +67,6 @@
     <Compile Include="Boundary\AddEnclosureForm.Designer.cs">
       <DependentUpon>AddEnclosureForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boundary\ErrorMessage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Boundary\ErrorMessage.Designer.cs">
-      <DependentUpon>ErrorMessage.cs</DependentUpon>
-    </Compile>
     <Compile Include="Boundary\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,9 +108,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Boundary\AddEnclosureForm.resx">
       <DependentUpon>AddEnclosureForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Boundary\ErrorMessage.resx">
-      <DependentUpon>ErrorMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Boundary\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
